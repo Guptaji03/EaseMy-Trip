@@ -1,15 +1,14 @@
 import React from "react";
-import Card from './Card'
+// import Card from './Card'
 import Discount from './Discount'
 import style from "./home.module.css";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import img1 from "../Navbar/img1.PNG"
 import TopFlight from "./TopFlight";
 import Footer from "./Footer";
 
 // import Searchbar from "../Search/Searchbar";
 import Search from "../Search/Search";
+import Carousel from "../crousel/Carousel";
 const Home = () => {
   return (
     <>
@@ -58,16 +57,20 @@ const Home = () => {
           </div>
           </div>
           
-       <div  className={style.button}>
-        <ArrowBackIosIcon />
-        <ArrowForwardIosIcon/>
-        </div>
+       
         </div>
       <Discount/>
       <div className={style.heading_news} > <p> Top Flight Routes</p> <p> Travel News</p></div> 
       <TopFlight/>
       <br />
-      <Card/>
+      <div>
+        <h1>Travel Blog</h1> 
+      </div>
+      <div >
+
+        <Carousel/>
+      </div>
+      
       <div className={style.search_flight_info}>
         <h3>Search Flights, Hotels, Bus and Holiday Packages</h3>
         <p>EaseMyTrip.com is one of the topmost travel companies of India and is a trusted name in the Indian travel industry. It is also known for providing the best travel deals to travelers. Being a strong network of 59,000 travel agents (as of November 20, 2021) and having more than 11 million direct customers, EaseMyTrip can satisfy all your travel needs. Here, You can book flight tickets, hotels, bus tickets, and holiday packages at a cost-effective price. So, why go anywhere else? Visit us for a memorable travel experience in your budget.</p>

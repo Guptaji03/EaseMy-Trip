@@ -15,7 +15,8 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "npm install"
   },
   "name": "studentscrud",
   "version": "1.0.0",

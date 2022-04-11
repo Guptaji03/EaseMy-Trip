@@ -885,7 +885,7 @@ width: 95%;
     margin-top: 7px;
 }
 
-.email_form_boxbutton span{
+.email_form_boxbutton button{
     background: #ef6614 none repeat scroll 0 0;
     border-radius: 4px;
     color: #ffffff;

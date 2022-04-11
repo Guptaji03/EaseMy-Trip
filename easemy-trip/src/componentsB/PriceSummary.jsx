@@ -3,8 +3,13 @@ import styles from './css/priceSummary.module.css';
 import { HiOutlineCurrencyRupee } from 'react-icons/hi'
 import { IoMdMan } from 'react-icons/io';
 import { FaChild, FaBaby } from 'react-icons/fa'
+import { useSelector } from 'react-redux';
 
 export const PriceSummary = () => {
+
+    const data = useSelector(state => state.flightCheckout.ticket)
+
+
     return (
         <div className={styles.outerDiv}>
             <div className={styles.flexdiv}>
@@ -34,12 +39,12 @@ export const PriceSummary = () => {
 
             <div className={styles.priceForIndividual}>
                 <p className={styles.detail}>Adult x 1</p>
-                <p className={styles.price}>₹ 5125</p>
+                <p className={styles.price}>₹ {data.price}</p>
             </div>
 
             <div className={styles.priceForIndividual}>
                 <p className={styles.detail}>Total Taxes</p>
-                <p className={styles.price}>₹ 725</p>
+                <p className={styles.price}>₹ 675</p>
             </div>
 
             <div className={styles.priceForIndividual}>
@@ -54,7 +59,7 @@ export const PriceSummary = () => {
 
             <div className={styles.priceForIndividual}>
                 <p className={styles.grandTotal}>Grand Total</p>
-                <p className={styles.grandTotal}>₹ 6,049</p>
+                <p className={styles.grandTotal}>₹ {+data.price + 675 + 199}</p>
             </div>
         </div >
     )

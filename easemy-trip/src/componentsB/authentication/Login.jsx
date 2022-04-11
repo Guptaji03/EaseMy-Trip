@@ -26,7 +26,7 @@ export const Login = ({ isToken, setIsToken }) => {
 
         console.log(loginData)
 
-        const response = await fetch('http://localhost:8000/auth/login', {
+        const response = await fetch('https://easemytrip-backend.herokuapp.com/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(loginData)
@@ -53,18 +53,18 @@ export const Login = ({ isToken, setIsToken }) => {
 
         if (userData) {
             setIsToken(userData)
-            navigate('/');
+            navigate('/check');
         }
     }
 
     // const googleLogin = async () => {
 
-    //     // const res = await fetch('http://localhost:8000/auth/google');
+    //     // const res = await fetch('https://easemytrip-backend.herokuapp.com/auth/google');
 
     //     // const data = await res.json();
     //     // console.log(data);
 
-    //     const res = window.open("http://localhost:8000/auth/google", "_self")
+    //     const res = window.open("https://easemytrip-backend.herokuapp.com/auth/google", "_self")
     //     // const data = res.json()
     //     console.log(res)
     // }

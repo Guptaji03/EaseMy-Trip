@@ -2,11 +2,15 @@ import React from 'react';
 import styles from './css/bookingDetails.module.css';
 import { FaPlaneDeparture } from 'react-icons/fa';
 import { BaggageList } from './BaggageList'
+import { useSelector } from 'react-redux';
 
 
 export const BookingDetails = () => {
 
     const [baggageActive, setBaggageActive] = React.useState(false);
+
+    const data = useSelector(state => state.flightCheckout.ticket)
+
     return (
         <div className={styles.outerDiv}>
             <div className={styles.firstPara}>
@@ -19,15 +23,15 @@ export const BookingDetails = () => {
                         <FaPlaneDeparture />
                     </div>
 
-                    <p style={{ fontSize: "18px", fontWeight: "420" }}>Delhi-Mumbai <span className={styles.span1}> |Tue-12Apr2022</span></p>
+                    <p style={{ fontSize: "18px", fontWeight: "420" }}>{data.from_location}-{data.to_location} <span className={styles.span1}> |{data.departure_date}</span></p>
 
                 </div>
                 <div className={styles.details}>
                     <div className={styles.flightName}>
                         <div style={{ display: 'flex', placeItems: "center", gap: "1em" }}>
-                            <img className={styles.logoCompany} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/1200px-AirAsia_New_Logo.svg.png" alt="" />
+                            <img className={styles.logoCompany} src={data.company_icon} alt="" />
                             <div className={styles.nameNumber}>
-                                <p className={styles.name}>AirAsia</p>
+                                <p className={styles.name}>{data.company_name}</p>
                                 <p className={styles.number}>I5-753
                                 </p>
                             </div>
@@ -38,9 +42,9 @@ export const BookingDetails = () => {
                     </div>
                     <div className={styles.flightTime}>
                         <div className={styles.board}>
-                            <strong>13:00</strong>
-                            <p>Delhi (DEL)</p>
-                            <p>Tue-12Apr2022</p>
+                            <strong>{data.departure_time[0]}{data.departure_time[1]}:{data.departure_time[2]}{data.departure_time[3]}</strong>
+                            <p>{data.from_location} ({data.from_location_code})</p>
+                            <p>{data.day.slice(0, 3)}-{data.departure_date}</p>
                             <p>Terminal - 3</p>
                         </div>
                         <div className={styles.beforeAfter}>
@@ -50,10 +54,10 @@ export const BookingDetails = () => {
                             <p className={styles.refund}>REFUNDABLE</p>
                         </div>
                         <div className={styles.board}>
-                            <strong>13:00</strong>
-                            <p>Delhi (DEL)</p>
-                            <p>Tue-12Apr2022</p>
-                            <p>Terminal - 3</p>
+                            <strong>{data.arrival_time[0]}{data.arrival_time[1]}:{data.arrival_time[2]}{data.arrival_time[3]}</strong>
+                            <p>{data.to_location} ({data.to_location_code})</p>
+                            <p>{data.day.slice(0, 3)}-{data.departure_date}</p>
+                            <p>Terminal - 1</p>
                         </div>
                     </div>
 

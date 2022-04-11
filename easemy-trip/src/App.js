@@ -12,12 +12,13 @@ import React from "react";
 // import { Route, Routes } from 'react-router-dom';
 // import './App.css';
 import CheckOut from "./Components/Home/CheckOut";
-import Footer from "./Components/Home/Footer";
+
 
 // import Home from './Components/Home/Home';
 
 // import Navbar from './Components/Navbar/Navbar';
 import { ProductLanding } from "./Components/ProductFlights/ProductLanding/ProductLanding";
+import CheckOut from "./Components/Home/CheckOut";
 
 function App() {
   // const dispatch = useDispatch()
@@ -31,22 +32,26 @@ function App() {
   return (
     <div className="App">
       <Navbar isToken={isToken} setIsToken={setIsToken} />
-
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
+
         <Route path="/checkout" element={<CheckOut />} />
-        <Route path="/check" element={<Payments />} />
+        <Route
+          path="/check"
+          element={<Payments isToken={isToken} setIsToken={setIsToken} />}
+        />
         <Route
           path="/login"
           element={<Login isToken={isToken} setIsToken={setIsToken} />}
         />
+
         <Route path="/register" element={<Register />} />
       </Routes>
 
-      {/* footer aayega */}
-
-      {/* <Footer /> */}
+     {/* footer aayega */}
+     
     </div>
   );
 }

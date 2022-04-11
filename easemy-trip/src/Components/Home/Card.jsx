@@ -2,25 +2,26 @@ import React from "react";
 import style from "./card.module.css";
 
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-const Card = () => {
+// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+const Card = ({data}) => {
   return (
     <div className={style.container}>
       
       <div className={style.crousel}>
         
       <div className={style.card}>
-        <img src="https://www.easemytrip.com/images/offer-img/best-countries-europe-hp.jpg" alt="images" className={style.img} />
+        <img src={data.image} alt="images" className={style.img} />
         <p>
-        Discover the best and the most Beautiful Countries of Europe
+        {data.paragraph}
         </p>
         <div className={style.date}>
           {" "}
           <CalendarMonthIcon className={style.icon} />{" "}
-          <span>March 15,2022</span>{" "}
+          <span>{data.date}</span>{" "}
         </div>
       </div>
+
       {/* <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/holi-in-india-hp.jpg" alt="images" className={style.img} />
         <p>
@@ -45,8 +46,8 @@ const Card = () => {
           <CalendarMonthIcon className={style.icon} />{" "}
           <span>March 15,2022</span>{" "}
         </div>
-      </div>
-      <div className={style.card}>
+      </div> */}
+      {/* <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/helicopter-rides-india-hp.jpg" alt="images" className={style.img} />
         <p>  Discover the most Worthy Helicopters rides in india for a true
           exploration </p>
@@ -55,7 +56,7 @@ const Card = () => {
           <CalendarMonthIcon className={style.icon} />{" "}
           <span>March 16,2022</span>{" "}
         </div>
-      </div> */}
+      </div>  */}
 
       {/* <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/best-countries-europe-hp.jpg" alt="images" className={style.img} />
@@ -99,7 +100,8 @@ const Card = () => {
           <CalendarMonthIcon className={style.icon} />{" "}
           <span>March 16,2022</span>{" "}
         </div>
-      </div> */}
+      </div>
+       */}
 
       </div>
 
@@ -108,3 +110,4 @@ const Card = () => {
 };
 
 export default Card;
+/*  */

@@ -50,8 +50,8 @@ app.use("/auth", require("./controllers/auth"));
 
 app.set("view engine", "ejs");
 
-// console.log(process.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRET);
-
-app.listen(process.env.PORT, () => {
-  console.log(`app is running at port ${process.env.PORT}`);
+// console.log(pro.cess.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRET);
+ var port =process.env.PORT || 8000
+app.listen(port, () => {
+  console.log(`app is running at port ${port}`);
 });

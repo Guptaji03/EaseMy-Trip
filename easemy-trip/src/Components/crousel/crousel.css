@@ -1,3 +1,7 @@
 .alice-carousel__prev-btn{
     color: brown;
+   
+}
+.alice-carousel__dots{
+    display: none;
 }

@@ -13,7 +13,36 @@ const Search = () => {
 
        </div>
        <Searchbar/>
+       
+       <div>
+       <div className={style.filter}>
+
+<div className={style.bhaskar} >
+  <input type="checkbox" />
+  <p>Defence Force</p>
+</div>
+<div className={style.bhaskar}>
+  <input type="checkbox" />
+  <p>Students</p>
+</div>
+<div className={style.bhaskar}>
+  <input type="checkbox" />
+  <p>Senior Citizens</p>
+</div>
+<div className={style.bhaskar}>
+  <input type="checkbox" />
+  <p>Doctors & Nurses</p>
+</div>
+<div className={style.bhaskar}>
+  <input type="checkbox" />
+  <p>Train Waitlisted</p>
+</div>
+</div>
+      
+      </div>
+      
      </div>
+     
     </>
   )
 }

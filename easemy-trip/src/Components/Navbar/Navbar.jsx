@@ -36,7 +36,7 @@ const Navbar = ({ isToken, setIsToken }) => {
     const userData = localStorage.removeItem("userData");
     setIsToken(null);
     navigate('/login')
-    // const res = await fetch(' http://localhost:8000/auth/logout');
+    // const res = await fetch(' https://easemytrip-backend.herokuapp.com/auth/logout');
 
   }
 

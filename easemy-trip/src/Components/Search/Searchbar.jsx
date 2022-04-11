@@ -135,7 +135,7 @@ const Searchbar = () => {
        id="controllable-states-demo"
     //    className={style.first}
        options={from}
-       sx={{ width: 200 , backgroundColor: "white" , border:0 , borderRadius: 0 }}
+       sx={{ width: 220 , backgroundColor: "white" , border:0 , borderRadius: 0 }}
        renderInput={(params) => <TextField {...params} label="From"  />}
      />
    </div>
@@ -154,7 +154,7 @@ const Searchbar = () => {
        }}
        id="controllable-states-demo"
        options={to}
-       sx={{ width: 200 , backgroundColor: "white" }}
+       sx={{ width: 220 , backgroundColor: "white" }}
        renderInput={(params) => <TextField {...params} label="To" />}
      />
    </div>
@@ -169,7 +169,7 @@ const Searchbar = () => {
         onChange={(newValue) => {
             setDate(newValue);
         }}
-        renderInput={(params) => <TextField {...params}  sx={{ width: 200 , backgroundColor: "white" }}/>}
+        renderInput={(params) => <TextField {...params}  sx={{ width: 180 , backgroundColor: "white" }}/>}
       />
     </LocalizationProvider>
    </div>
@@ -183,7 +183,7 @@ const Searchbar = () => {
         onChange={(newValue) => {
           setReturnDate(newValue);
         }}
-        renderInput={(params) => <TextField {...params}  sx={{ width: 200 , backgroundColor: "white" }}/>}
+        renderInput={(params) => <TextField {...params}  sx={{ width: 180 , backgroundColor: "white" }}/>}
       />
     </LocalizationProvider>
    </div>
@@ -200,9 +200,10 @@ const Searchbar = () => {
         
         sx={{
             ':hover': {
+              
               bgcolor: 'white',
               color: 'black',
-            },height:55 , backgroundColor:"white" , color:"black" }}
+            },height:55 , backgroundColor:"white" , color:"black" , width:120 }}
       
         endIcon={<KeyboardArrowDownIcon />}
       >

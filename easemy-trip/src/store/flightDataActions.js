@@ -8,7 +8,7 @@ export const fetchFlightData = (dateObj) => {
   return async (dispatch) => { 
 
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:8000/flights/${dateObj.date}/${dateObj.from_location}/${dateObj.to_location}`);
+      const response = await fetch(`https://easemytrip-backend.herokuapp.com/flights/${dateObj.date}/${dateObj.from_location}/${dateObj.to_location}`);
   
       if (!response.ok) {
         throw new Error("Could not fetch data");
