@@ -18,7 +18,7 @@ import CheckOut from "./Components/Home/CheckOut";
 
 // import Navbar from './Components/Navbar/Navbar';
 import { ProductLanding } from "./Components/ProductFlights/ProductLanding/ProductLanding";
-import CheckOut from "./Components/Home/CheckOut";
+
 
 function App() {
   // const dispatch = useDispatch()
@@ -50,7 +50,7 @@ function App() {
         <Route path="/register" element={<Register />} />
       </Routes>
 
-     {/* footer aayega */}
+  
      
     </div>
   );
