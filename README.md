@@ -2,7 +2,7 @@
 It's a website that provides the ticket and booking facilities for flights and hotels etc.<br/>
 
 # Path to experience the project
-Select the following dates in search bar ==> 16-April-2022 to 18-April-2022, it will redirect user to product page. From there user can filter tickets according to his need and book a ticket afterwards.
+Select the following places and dates in search bar ==> jaipur to delhi from 16-April-2022 to 18-April-2022, it will redirect user to product page. From there user can filter tickets according to his need and book a ticket afterwards.
 <a href="https://ease-my-trip.netlify.app/" target="_blank">Click here for Live demo</a>
 
 ## Team members:
