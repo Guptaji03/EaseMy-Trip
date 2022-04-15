@@ -56,7 +56,7 @@ const Navbar = ({ isToken, setIsToken }) => {
         <div className={style.tabs}>
           <div className={style.text1}>
 
-            <p onClick={() => {alert("Please fill the search bar according to readme, this link is not active")}}>FLIGHTS</p>
+            <p onClick={() => alert("Please click as per readme, this link is not active yet.")}  >FLIGHTS</p>
 
 
             <hr />
